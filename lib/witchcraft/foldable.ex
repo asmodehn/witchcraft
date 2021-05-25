@@ -78,7 +78,7 @@ defclass Witchcraft.Foldable do
         iex> sum = fn xs -> right_fold(xs, 0, &+/2) end
         ...> sum.([1, 2, 3])
         6
-        ...> sum.([4, 5, 6])
+        iex> sum.([4, 5, 6])
         15
 
     """
@@ -144,7 +144,7 @@ defclass Witchcraft.Foldable do
       iex> sum = fn xs -> right_fold(xs, 0, &+/2) end
       ...> sum.([1, 2, 3])
       6
-      ...> sum.([4, 5, 6])
+      iex> sum.([4, 5, 6])
       15
 
       iex> left_fold([1, 2, 3], [], fn(acc, x) -> [x | acc] end)
@@ -341,7 +341,7 @@ defclass Witchcraft.Foldable do
   end
 
   @doc """
-  Find the maximum element in a foldable structure using a custom comparitor
+  Find the maximum element in a foldable structure using a custom comparator
 
   Elements must implement `Witchcraft.Ord`.
 
@@ -380,7 +380,7 @@ defclass Witchcraft.Foldable do
       iex> use Witchcraft.Foldable
       ...> max([2, 3, 1])
       3
-      ...> max([[4], [1, 2, 3, 4]])
+      iex> max([[4], [1, 2, 3, 4]])
       [4]
 
       %BinaryTree{
@@ -438,7 +438,7 @@ defclass Witchcraft.Foldable do
       iex> use Witchcraft.Foldable
       ...> min([2, 3, 1])
       1
-      ...> min([[4], [1, 2, 3, 4]])
+      iex> min([[4], [1, 2, 3, 4]])
       [1, 2, 3, 4]
 
       %BinaryTree{
